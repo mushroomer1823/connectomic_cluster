@@ -28,16 +28,16 @@ read -u3
         tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -rk4 -seed_grid_per_voxel ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz 2 ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_seed_1M.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
         fi
         if [ ! -f ${subPath}/track_det_rk4_dynamic_1M_step_30.tck ]; then
-        tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -angle 30 -select 1M -rk4 -seed_dynamic ${subPath}/WM_FODs_norm.mif ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_dynamic_1M_step_30.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
+        tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -angle 75 -select 1M -rk4 -seed_dynamic ${subPath}/WM_FODs_norm.mif ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_dynamic_1M_step_75.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
         fi
         if [ ! -f ${subPath}/track_det_rk4_seed_1M_step_30.tck ]; then
-        tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -angle 30 -rk4 -seed_grid_per_voxel ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz 2 ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_seed_1M_step_30.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
+        tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -angle 75 -rk4 -seed_grid_per_voxel ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz 2 ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_seed_1M_step_75.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
         fi
         if [ ! -f ${subPath}/track_det_rk4_wmgmi_1M.tck ]; then
         tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -select 1M -rk4 -seed_gmwmi ${subPath2}/gmwmi.mif ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_wmgmi_1M.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
         fi
         if [ ! -f ${subPath}/track_det_rk4_wmgmi_1M_step_30.tck ]; then
-        tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -angle 30 -select 1M -rk4 -seed_gmwmi ${subPath2}/gmwmi.mif ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_wmgmi_1M_step_30.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
+        tckgen -algorithm SD_STREAM -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -angle 75 -select 1M -rk4 -seed_gmwmi ${subPath2}/gmwmi.mif ${subPath}/WM_FODs_norm.mif ${subPath}/track_det_rk4_wmgmi_1M_step_75.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
         fi
         if [ ! -f ${subPath}/track_ifod1_rk4_dynamic_1M.tck ]; then
         tckgen -algorithm iFOD1 -act ${subPath2}/5TT.mif -crop_at_gmwmi -cutoff 0.01 -select 1M -rk4 -seed_dynamic ${subPath}/WM_FODs_norm.mif ${subPath}/WM_FODs_norm.mif ${subPath}/track_ifod1_rk4_dynamic_1M.tck -mask ${Path}/${subj}/T1w/Diffusion_7T/nodif_brain_mask.nii.gz -minlength 20 -maxlength 250 -nthreads 4 -quiet > /dev/null 2>&1
