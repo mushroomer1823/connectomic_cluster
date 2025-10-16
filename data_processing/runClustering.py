@@ -44,7 +44,7 @@ for i in np.arange(clubernumber):
 	ind = np.where(label==i)
 	data_ind = data[ind]
 	
-	clubernumber_ind = np.ceil(np.power(np.shape(data_ind)[0],1/6)).astype(int)
+	clubernumber_ind = np.ceil(np.power(np.shape(data_ind)[0],1/5)).astype(int)
 	batchsize_ind = np.ceil(np.power(np.shape(data_ind)[0],1/4)).astype(int)
 
 	cluster_ind = MiniBatchKMeans(n_clusters=clubernumber_ind, init='k-means++',
