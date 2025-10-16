@@ -8,7 +8,7 @@ Welcome to the Connectomic cluster repository, a resource for the "Detailed Conn
 - Authors: Hiuying Yip, Yifei He, Yu Xie, Fan Zhang, Ye Wu
 - Year: 2025
 
-## Software dependencies:
+## Software dependencies
 
 The connectomic cluster generation pipeline makes use of the following software packages:
 
